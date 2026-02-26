@@ -1,12 +1,11 @@
 ﻿using System.Diagnostics.Metrics;
-
 namespace GuessNumber
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int min = 0; // Минимальное количество попыток за все игры
+            int min = 0;
             int max = 0; // Максимальное количество попыток
             int count = 0; // Общее количество попыток во всех играх
             int countGame = 0; // Количество сыгранных игр
