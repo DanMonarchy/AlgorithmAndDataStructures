@@ -6,9 +6,9 @@ namespace GuessNumber
         static void Main(string[] args)
         {
             int min = 0;
-            int max = 0; // Максимальное количество попыток
-            int count = 0; // Общее количество попыток во всех играх
-            int countGame = 0; // Количество сыгранных игр
+            int max = 0;
+            int count = 0;
+            int countGame = 0;
             Random rnd = new Random(); // Создание генератора случайных чисел
             char answer = 'Y'; // Переменная для ответа пользователя (продолжать игру?)
             do // Цикл выполняется минимум один раз
