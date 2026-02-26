@@ -10,8 +10,8 @@ namespace GuessNumber
             int count = 0;
             int countGame = 0;
             Random rnd = new Random(); // Создание генератора случайных чисел
-            char answer = 'Y'; // Переменная для ответа пользователя (продолжать игру?)
-            do // Цикл выполняется минимум один раз
+            char answer = 'Y';
+            do
             {
                 int couneter = PlayGame(rnd, ref min, ref max, ref count, ref countGame);
                 // Вызов игры. Передаём статистику по ссылке (ref), чтобы она изменялась внутри метода
