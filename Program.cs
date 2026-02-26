@@ -31,13 +31,11 @@ namespace GuessNumber
                 int userNumber = ReadUserNumber();
                 if (userNumber > number)
                     Console.WriteLine("Your number is less!");
-                // Подсказка (сообщение написано логически наоборот)
                 else if (userNumber < number)
                     Console.WriteLine("Your number is great!");
-                // Подсказка (также перепутан текст)
                 else
                 {
-                    Console.WriteLine("You are Win!!!"); // Сообщение о победе
+                    Console.WriteLine("You are Win!!!");
                     if (min == 0 || min > couneter)
                         min = couneter;
                     max = max < couneter ? couneter : max;
