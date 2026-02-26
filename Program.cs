@@ -9,7 +9,7 @@ namespace GuessNumber
             int max = 0;
             int count = 0;
             int countGame = 0;
-            Random rnd = new Random(); // Создание генератора случайных чисел
+            Random rnd = new Random();
             char answer = 'Y';
             do
             {
