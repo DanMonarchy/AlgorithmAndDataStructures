@@ -47,42 +47,35 @@ namespace GuessNumber // Объявление пространства имён
                     Console.WriteLine("You are Win!!!"); // Сообщение о победе
                     if (min == 0 || min > couneter)
                         min = couneter;
-                    // Обновляем минимум попыток
                     max = max < couneter ? couneter : max;
-                    // Обновляем максимум попыток (тернарный оператор)
                     count += couneter;
-                    // Добавляем попытки к общему количеству
                     countGame++;
-                    // Увеличиваем количество игр
-                    break; // Выход из цикла после победы
+                    break;
                 }
             }
-            return couneter; // Возвращаем количество попыток
+            return couneter;
         }
-        static int ReadUserNumber() // Метод чтения числа от пользователя
+        static int ReadUserNumber()
         {
-            int userNumber = 0; // Переменная для хранения введённого числа
-            Console.WriteLine("Input number from [1;100]");
-            // Просим пользователя ввести число от 1 до 100
+            int userNumber = 0;
+            Console.WriteLine("Input number from [1;100]");
 
             for (int i = 0; i < 3; i++)
-            // Даём пользователю 3 попытки ввода корректного числа
             {
                 if (!int.TryParse(Console.ReadLine(), out userNumber)
                     || userNumber > 100 || userNumber < 1)
-                    // Проверяем: число ли это и входит ли в диапазон
+                    
                     Console.WriteLine("Input number from [1;100]");
                 else
-                    break; // Если всё корректно — выходим из цикла
-                if (i == 2) // Если третья неудачная попытка
+                    break;
+                if (i == 2)
                 {
                     Console.WriteLine("You are stupid");
-                    // Сообщение (некорректное с точки зрения UX)
                     Environment.Exit(0);
                     // Завершение программы
                 }
             }
-            return userNumber; // Возвращаем введённое число
+            return userNumber;
         }
     }
 }
