@@ -14,21 +14,16 @@ namespace GuessNumber
             do
             {
                 int couneter = PlayGame(rnd, ref min, ref max, ref count, ref countGame);
-                // Вызов игры. Передаём статистику по ссылке (ref), чтобы она изменялась внутри метода
-                Console.WriteLine("Do you want play game?"); // Вопрос о продолжении игры
+                Console.WriteLine("Do you want play game?");
                 answer = Convert.ToChar(Console.Read());
-                // Чтение одного символа из консоли (лучше использовать ReadLine)
             }
             while (answer == 'Y'); // Повторяем, пока пользователь вводит 'Y'
             Console.WriteLine($"min = {min} max = {max} avg = {(double)count / countGame}");
-            // Вывод статистики: минимум, максимум и среднее количество попыток
         }
-        static int PlayGame(Random rnd, ref int min, ref int max, ref int count, ref int countGame)
-        // Метод одной игры. Возвращает количество попыток
+        static int PlayGame(Random rnd, ref int min, ref int max, ref int count, ref int countGame)
         {
             int couneter = 0; // Счётчик попыток
-            int number = rnd.Next(1, 100);
-            // Генерация случайного числа от 1 до 99 (100 не включается)
+            int number = rnd.Next(1, 101);
             Console.WriteLine("Try guess number?"); // Сообщение игроку
             while (true) // Бесконечный цикл до угадывания числа
             {
