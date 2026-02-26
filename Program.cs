@@ -17,19 +17,18 @@ namespace GuessNumber
                 Console.WriteLine("Do you want play game?");
                 answer = Convert.ToChar(Console.Read());
             }
-            while (answer == 'Y'); // Повторяем, пока пользователь вводит 'Y'
+            while (answer == 'Y');
             Console.WriteLine($"min = {min} max = {max} avg = {(double)count / countGame}");
         }
         static int PlayGame(Random rnd, ref int min, ref int max, ref int count, ref int countGame)
         {
             int couneter = 0; // Счётчик попыток
             int number = rnd.Next(1, 101);
-            Console.WriteLine("Try guess number?"); // Сообщение игроку
-            while (true) // Бесконечный цикл до угадывания числа
+            Console.WriteLine("Try guess number?");
+            while (true)
             {
-                couneter++; // Увеличиваем счётчик попыток
+                couneter++;
                 int userNumber = ReadUserNumber();
-                // Чтение числа, введённого пользователем
                 if (userNumber > number)
                     Console.WriteLine("Your number is less!");
                 // Подсказка (сообщение написано логически наоборот)
