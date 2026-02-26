@@ -62,8 +62,7 @@ namespace GuessNumber
                 if (i == 2)
                 {
                     Console.WriteLine("You are stupid");
-                    Environment.Exit(0);
-                    // Завершение программы
+                    return -1;
                 }
             }
             return userNumber;
