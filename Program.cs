@@ -22,7 +22,7 @@ namespace GuessNumber
         }
         static int PlayGame(Random rnd, ref int min, ref int max, ref int count, ref int countGame)
         {
-            int couneter = 0; // Счётчик попыток
+            int couneter = 0;
             int number = rnd.Next(1, 101);
             Console.WriteLine("Try guess number?");
             while (true)
