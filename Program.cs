@@ -28,7 +28,7 @@ namespace GuessNumber
             while (true)
             {
                 couneter++;
-                int userNumber = ReadUserNumber();
+                int userNumber = UserNumber();
                 if (userNumber > number)
                     Console.WriteLine("Your number is less!");
                 else if (userNumber < number)
@@ -46,7 +46,7 @@ namespace GuessNumber
             }
             return couneter;
         }
-        static int ReadUserNumber()
+        static int UserNumber()
         {
             int userNumber = 0;
             Console.WriteLine("Input number from [1;100]");
