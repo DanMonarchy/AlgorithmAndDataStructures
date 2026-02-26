@@ -1,10 +1,10 @@
-﻿using System.Diagnostics.Metrics; // Подключение пространства имён (в данном коде не используется)
+﻿using System.Diagnostics.Metrics;
 
-namespace GuessNumber // Объявление пространства имён
+namespace GuessNumber
 {
-    internal class Program // Главный класс программы
+    internal class Program
     {
-        static void Main(string[] args) // Точка входа в программу
+        static void Main(string[] args)
         {
             int min = 0; // Минимальное количество попыток за все игры
             int max = 0; // Максимальное количество попыток
