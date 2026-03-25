@@ -26,9 +26,6 @@ namespace App3Bebra
             int right = 0, left = 0;
             while (right < nums.Length)
             {
-                // --- НАЧАЛО ТЕЛА ЦИКЛА ---
-
-                // 3. ЛОГИКА (Что делаем на каждом шаге)
                 // Смотрим на число под правой рукой (nums[right])
                 if (nums[right] == 0)
                 {
